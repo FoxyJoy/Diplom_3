@@ -10,10 +10,11 @@ class LoginLocators:
     place_an_order_button = (By.XPATH, "// button[text() = 'Оформить заказ']")
     register_text_link = (By.XPATH, "//a[@href='/register']")    # Кнопка "Зарегистрироваться"
     cabinet = (By.XPATH, "//p[text() = 'Личный Кабинет']")    #.//p[contains(text(), 'Личный Кабинет')]
-    auth_form = (By.XPATH, ".//div[@class = 'Auth_login__3hAey']")    # Форма авторизации
+    auth_form = (By.XPATH, ".//div[@class='Auth_login__3hAey']")    # Форма авторизации
     invisible_modal = (By.XPATH, "//div[@class ='Modal_modal_overlay__x2ZCr']")
     email_label = (By.XPATH, "//label[text()='Email']")
     password_label = (By.XPATH, "//label[text()='Пароль']")
+    header = (By.XPATH, ".//header")
 
 class ProfilePageLocators:
     profile_button = (By.XPATH, ".//a[text() = 'Профиль']")   # Кнопка "Профиль" в Личном кабинете
@@ -26,7 +27,7 @@ class ProfilePageLocators:
 class MainPageLocators:
     constructor_button = (By.XPATH, ".//p[@class='AppHeader_header__linkText__3q_va ml-2'][text()='Конструктор']")    # (By.XPATH, ".//p[contains(text(), 'Конструктор')]")
     order_feed_button = (By.XPATH, ".//p[contains(text(), 'Лента Заказов')]")
-    order_feed_link = (By.XPATH, ".//a[@class='AppHeader_header__link__3D_hX']")
+    order_feed_link = (By.XPATH, ".//a[@href='/feed']")
     personal_account_button = (By.XPATH, ".//button[contains(text(), 'Войти в аккаунт')]")
     constructor_form = (By.XPATH, ".//div[@class = 'BurgerIngredients_ingredients__menuContainer__Xu3Mo']")
     fluorescent_bun_button = (By.XPATH, ".//img[@alt = 'Флюоресцентная булка R2-D3']")
@@ -49,6 +50,7 @@ class OrderFeedLocators:
     target_drop_area = (By.XPATH, ".//ul[@class = 'BurgerConstructor_basket__list__l9dp_']")   # локатор области заказа
     target_in_order_feed = (By.XPATH, ".//ul[@class = 'OrderFeed_list__OLh59']")   #локатор заказов в ленте заказов
     number_of_created_order = (By.XPATH, ".//h2[@class = 'Modal_modal__title_shadow__3ikwq Modal_modal__title__2L34m text text_type_digits-large mb-8']")
+    number_of_created_order_text = "9999"
 
 class PasswordPageLocators:
     email_input = (By.XPATH, ".//input[@name = 'name']")

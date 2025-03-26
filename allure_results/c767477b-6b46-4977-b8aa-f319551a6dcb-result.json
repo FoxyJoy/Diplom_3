@@ -1,1 +1,0 @@
-{"name": "Выход из аккаунта", "status": "skipped", "parameters": [{"name": "driver", "value": "'firefox'"}], "start": 1742500533773, "stop": 1742500533773, "uuid": "209f5689-4b6b-4ff2-aecf-bce92435e980", "testCaseId": "e7e0c86b510209ef10c089d0707e89d9", "fullName": "tests.test_profile.TestBurgersProfile#test_logout_from_account"}

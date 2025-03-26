@@ -1,9 +1,6 @@
 import allure
 from pages.base_page import BasePage
 from locators.locators import *
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver import ActionChains
 
 class OrderFeedPage(BasePage):
     @allure.step('Клик по первому заказу в списке "Лента заказов"')
@@ -32,13 +29,9 @@ class OrderFeedPage(BasePage):
             orders_list.append(order_number)
         return orders_list
 
-    @allure.step('Ингредиент для перетаскивания')
-    def ingredient_to_drag(self):
-        self.get_text_locators(OrderFeedLocators.target_in_order_feed)
-
     @allure.step('Используем WebDriverWait для ожидания появления номера заказа')
     def get_created_order_number(self):
-        WebDriverWait(self.driver, 10).until_not(EC.text_to_be_present_in_element(OrderFeedLocators.number_of_created_order, "9999"))
+        self.wait_text(OrderFeedLocators.number_of_created_order, OrderFeedLocators.number_of_created_order_text)
         return self.get_text_locator(OrderFeedLocators.number_of_created_order)
 
     @allure.step('Получение количества заказов')
